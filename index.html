@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рейтинг любимых блюд</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e0f7fa;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            background-color: #ffffff;
+        }
+        th, td {
+            padding: 15px;
+            border: 1px solid #ddd;
+            text-align: center;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        th {
+            background-color: #00796b;
+            color: white;
+            font-size: 18px;
+        }
+        td:hover {
+            background-color: #b2dfdb;
+        }
+        a {
+            color: #00796b;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        img {
+            width: 150px;
+            height: auto;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        header img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-bottom: 5px solid #00796b;
+        }
+        h1 {
+            color: #004d40;
+        }
+    </style>
+</head>
+<body>
+<!--    <audio autoplay loop>-->
+<!--        <source src="/audio/Кastor-LostStory.mp3" type="audio/mpeg">-->
+<!--        Your browser does not support the audio element.-->
+<!--    </audio>-->
+
+    <button onclick="document.getElementById('background-audio').play()">Play music</button>
+    <audio id="background-audio" loop>
+        <source src="audio/Kastor-LostStory.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <header>
+        <img src="https://z-m-scontent-lis1-1.xx.fbcdn.net/v/t39.30808-6/326213677_3464391390506777_7964794092468132077_n.png?_nc_cat=108&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeF9kblnClq5WwZ6Le9NVdGw-lyqnfAMw5H6XKqd8AzDkZm2LLGYWXLszr-AjOayOrPtzDN9-zZF3BYICGfxIJiT&_nc_ohc=o3IqB_rSvzQQ7kNvgHFIQkv&_nc_ad=z-m&_nc_cid=1272&_nc_ht=z-m-scontent-lis1-1.xx&_nc_gid=AmEWtzu4I6BjCEsPMMdKDC9&oh=00_AYCB59EuuYazpqArzA90sjKpSr1UuhusIhcES_BmmbdQ8w&oe=6703062B" alt="Вкусная трапеза">
+    </header>
+
+    <h1>Рейтинг Любимых Блюд</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Название блюда</th>
+                <th>Оценка</th>
+                <th>Рецепт</th>
+                <th>Фото блюда</th>
+            </tr>
+        </thead>
+    <tbody>
+            <tr>
+                <td>Украинский борщ с пампушками</td>
+                <td>10</td>
+                <td><a href="https://www.povarenok.ru/recipes/show/12169/" target="_blank">Рецепт</a></td>
+                <td><img src="https://www.povarenok.ru/data/cache/2013mar/06/57/97429_10705-640x480.jpg" alt="Борщ" onclick="openImageInNewWindow(this)"></td>
+            </tr>
+            <tr>
+                <td>Котлеты по-киевски</td>
+                <td>9</td>
+                <td><a href="https://www.povarenok.ru/recipes/show/41728/" target="_blank">Рецепт</a></td>
+                <td><img src="https://www.povarenok.ru/data/cache/2023aug/14/25/3064798_70147-640x480.jpg" alt="Котлеты по-киевски" onclick="openImageInNewWindow(this)"></td>
+            </tr>
+            <tr>
+                <td>Салат с тунцом и овощами</td>
+                <td>9</td>
+                <td><a href="https://www.povarenok.ru/recipes/show/153822/" target="_blank">Рецепт</a></td>
+                <td><img src="https://www.povarenok.ru/data/cache/2018oct/04/29/2410131_92518-710x550x.jpg" alt="Салат с тунцом" onclick="openImageInNewWindow(this)"></td>
+            </tr>
+            <tr>
+                <td>Салат "Лобио"</td>
+                <td>8</td>
+                <td><a href="https://www.povarenok.ru/recipes/show/117968/" target="_blank">Рецепт</a></td>
+                <td><img src="https://www.povarenok.ru/data/cache/2015dec/14/47/1378384_84315-710x550x.jpg" alt="Лобио" onclick="openImageInNewWindow(this)"></td>
+            </tr>
+            <tr>
+                <td>Салат "Аджапсандал"</td>
+                <td>7</td>
+                <td><a href="https://www.povarenok.ru/recipes/show/130217/" target="_blank">Рецепт</a></td>
+                <td><img src="https://www.povarenok.ru/data/cache/2016aug/03/15/1664411_89256-710x550x.jpg" alt="Аджапсандал" onclick="openImageInNewWindow(this)"></td>
+            </tr>
+    </tbody>
+    </table>
+
+    <script>
+        function openImageInNewWindow(imgElement) {
+            const src = imgElement.src;
+            const newWindow = window.open(src, '_blank');
+            newWindow.focus();
+        }
+    </script>
+</body>
+</html>
